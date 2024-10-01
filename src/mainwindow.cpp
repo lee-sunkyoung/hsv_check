@@ -19,7 +19,7 @@ void MainWindow::slotUpdateImg() {
       ui->label->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
 
   int value[6] = {hl, hh, sl, sh, vl, vh};
-  std::cout << hl << " " << hh << " " << sl << " " << sh << " " << vl << " "
+  std::cout << hl << " " << sl << " " << vl << " " << hh << " " << sh << " "
             << vh << std::endl;
   Change_to_Binary(raw_img, bin_img, value);
 
@@ -71,9 +71,6 @@ void MainWindow::Change_to_Binary(cv::Mat &input_img, cv::Mat &output_img,
 
   // 범위안에  255(흰색)로 만들어주고 나머지는 0(검은색)으로 만들어
   // 흑백 이미지들어가게되면를 만든다.
-  
-  std::cout << value[0] << " " << value[2] << " " << value[4] << " " << value[1] << " " << value[3] << " "
-            << value[5] << std::endl;
 
   cv::inRange(output_img, cv::Scalar(value[0], value[2], value[4]),
               cv::Scalar(value[1], value[3], value[5]), output_img);
