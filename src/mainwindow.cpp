@@ -72,7 +72,7 @@ void MainWindow::Change_to_Binary(cv::Mat &input_img, cv::Mat &output_img,
   // 범위안에  255(흰색)로 만들어주고 나머지는 0(검은색)으로 만들어
   // 흑백 이미지들어가게되면를 만든다.
   
-  std::cout << value[0] << " " << value[1] << " " << value[2] << " " << value[3] << " " << value[4] << " "
+  std::cout << value[0] << " " << value[2] << " " << value[4] << " " << value[1] << " " << value[3] << " "
             << value[5] << std::endl;
 
   cv::inRange(output_img, cv::Scalar(value[0], value[2], value[4]),
