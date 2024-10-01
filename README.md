@@ -12,7 +12,7 @@ reference:
 - change topic name and msg type Depending on the image format your camera supports.
 - each row of sliding bar means h, s, v in order.
 - left side of sliding bar is low value, right side of sliding bar means high value.
-- current sliding bar value is checked in the terminal window, with order of h_low, h_high, s_low, s_high, v_low, v_high.
+- current sliding bar value is checked in the terminal window, with order of h_low, s_low, v_low, h_high, s_high, v_high.
 
 
 # how to build
